@@ -1,0 +1,13 @@
+<h2>Welcome to PizzaShop !</h2><br/>
+<img src="assets/img/pizza.png" height="90" width="180"><br/>
+<div [hidden]="!authenticated()">
+  <h4><b>Your order</b></h4>
+  <h5><b>Pizza type : {{pizzaOrder.type}}</b></h5>
+  <h5><b>Quantity : {{pizzaOrder.quantity}}</b></h5>
+  <h5><b>Total : {{pizzaOrder.total}}</b></h5>
+  <a class="nav nav-pills" (click)="logout()">Logout</a>
+</div>
+<div [hidden]="authenticated()">
+  <h5><b>Login to see your pizza orders</b></h5>
+  <a class="nav nav-pills" routerLinkActive="active" routerLink="/login">Login</a>
+</div>
